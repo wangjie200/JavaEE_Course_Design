@@ -1,11 +1,9 @@
 package com.wang200.javaee_course_design.bean;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="OrderHistory")
 public class OrderHistory {
     public static final long serialVersionId = 3L;
     @Id
@@ -17,6 +15,10 @@ public class OrderHistory {
     private int price;
 
     private int sumPrice;
+
+    private int id;     //用户名
+
+    public int getId() { return id;}
 
     public String getTime() {
         return time;
@@ -49,4 +51,6 @@ public class OrderHistory {
     public void setSumPrice(int sumPrice) {
         this.sumPrice = sumPrice;
     }
+
+    public void setId(int id) { this.id = id;}
 }

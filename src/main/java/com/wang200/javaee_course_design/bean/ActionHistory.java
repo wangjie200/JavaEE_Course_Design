@@ -12,47 +12,34 @@ public class ActionHistory {
     public static final long serialVersionId = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
-
-    private enum Action{addRepertory,decreaseRepertory,addBook} ;
-    private Action action;
-
     private String time;
 
-    public String getId() {
-        return id;
-    }
+    //changeRepertory,addBook,check the list} ;
+    private String action;
+
+    private String name;
 
     public String getTime() {
         return time;
     }
 
-
-    public void setAction(Action action) {
-        this.action = action;
+    public String getAction() {
+        return action;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getName() {
+        return name;
     }
 
     public void setTime(String time) {
         this.time = time;
     }
 
-    public Action getAction() {
-        return action;
+    public void setAction(String action) {
+        this.action = action;
     }
-    //    public String getAction() {
-//        switch (action){
-//            case addBook:
-//                return "addBook";
-//            break;
-//            case decreaseRepertory:
-//                return "decreaseRepertory";
-//            break;
-//            case addRepertory:
-//                return "addRepertory";
-//            break;
-//        }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

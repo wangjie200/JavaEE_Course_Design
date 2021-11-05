@@ -11,6 +11,13 @@
     <title>Title</title>
 </head>
 <body>
-
+<%
+    if(session.getId().isEmpty()){
+%>
+        <h1>请先登录！</h1>
+        <jsp:forward page="login.jsp"></jsp:forward>
+<%
+    }else{
+%>
 </body>
 </html>
